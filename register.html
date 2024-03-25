@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="register.css">
+<title>Registration Form</title>
+
+<link rel="icon" id="weblogo" type="image/x-icon" href="tripcom-logos.jpeg">
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+        
+        <label for="contact">Contact</label>
+        <input type="tel" id="contact" name="contact"  maxlength="10" required>
+        
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="password">Confirm Password</label>
+        <input type="password" id="confirmpassword" name="password" required>
+        
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <input type="submit" value="Register">
+    </form>
+    <div class="login-link">
+        Already have an account? <a href="index.html">Login</a>
+    </div>
+</div>
+
+
+
+<script>
+    function validateForm() {
+        var fullname = document.getElementById("fullname").value;
+        var contact = document.getElementById("contact").value;
+        var dob = document.getElementById("dob").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmpassword= document.getElementById("confirmpassword").value;
+        var gender = document.getElementById("gender").value;
+
+        // Simple validation
+        if (fullname.trim() === "" || contact.trim() === "" || dob.trim() === "" || email.trim() === "" || password.trim() === "" || confirmpassword.trim() === "" || gender === "") {
+            alert("All fields are required");
+            return false;
+        }
+        return true;
+
+        if (password !== confirmPassword) {
+        return prompt("Password do not match, try again!")
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="index.css">
+
+    <title>trip.com</title>
+    <link rel="icon" id="weblogo" type="image/x-icon" href="tripcom-logos.jpeg">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="tripcom-logos_white.png" alt="Logo" width="30" height="25" class="d-inline-block align-text-center"></a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">=</span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#booking">Book</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#packages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Packages
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">India</a></li>
+                    <li><a class="dropdown-item" href="#">Italy</a></li>
+                    <li><a class="dropdown-item" href="#">France</a></li>
+                    <li><a class="dropdown-item" href="#">Germany</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#gallery">Gallery</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#service">Service</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about">About</a>
+                </li>
+
+                </ul>
+
+            <button type="button" class="btn btn-info" id="login" data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
+            <a class="btn btn-info" id="register" href="register.html" type="button">Register</a>
+        </div>
+    </div>
+    </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal"  aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h1 class="modal-title fs-4" id="heading">Login to trip.com</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Close</button>
+        </div>
+        <div class="modal-body">
+            <form id="registrationForm" onsubmit="return validateForm()">
+        
+                <label for="email">Email</label>
+                <input type="email" id="loginemail" name="email" required><br>
+        
+                <label for="password">Password</label>
+                <input type="password" id="loginpassword" name="password" required><br>
+
+                <input type="submit" value="Login">
+                <div class="login-link">
+                    Don't have an account? <a href="register.html">Register</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+<section>
+    <h2 style="color: white;">Welcome to trip.com</h2>
+    <h1 style="color: #023047;">Visit Place <span id="changetext"></span></h1>
+    
+    <button id="booknow"><a href="#booking"> Book Now  </a></button>
+</section>
+
+<!--------end of navbar and main------------>
+
+
+<!------------------package start------------------------------>
+
+<div class="container mt-5" id="packages">
+<h1 text-align="center">Packages</h1>
+
+<div class="row md-5">
+
+    <div class="col md-4">
+    <div class="us">
+        <div class="card border border-danger">
+            <img class="img-fluid" src="image/USA.jpg" alt="gallery" id="galleryimg">
+            <h6 class="galleryname">USA</h6>
+            <p id="para">The U.S. is a country of 50 states covering a vast swath of North America, with Alaska in the northwest and Hawaii extending the nation’s presence into the Pacific Ocean.</p>
+        <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+        </div>
+        <p id="price"> Price: $850</p>
+        <button id="gallerybtn">Book Now</button>
+        </div>
+    </div>
+</div>
+
+<div class="col md-4">
+    <div class="india">
+    <div class="card border border-danger">
+        <img class="img-fluid" src="image/india.jpg" alt="gallery" id="galleryimg">
+        <h6 class="galleryname">India</h6>
+        <p id="para">India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by area; the most populous country as of June 2023</p>
+    <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+    </div>
+    <p id="price"> Price: $700</p>
+    <button id="gallerybtn">Book Now</button>
+    </div>
+</div>
+</div>
+
+
+<div class="col md-4">
+    <div class="italy">
+    <div class="card border border-danger">
+        <img class="img-fluid" src="image/italy.jpg" alt="gallery" id="galleryimg">
+        <h6 class="galleryname">Italy</h6>
+        <p id="para">Italy, a European country with a long Mediterranean coastline, has left a powerful mark on Western culture and cuisine.Rome, is home to the Vatican as well as landmark art and ancient ruins.</p>
+    <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+        <i class="bi bi-star"></i>
+    </div>
+    <p id="price"> Price: $750</p>
+    <button id="gallerybtn">Book Now</button>
+    </div>
+</div>
+</div>
+</div>      <!------------first row--------------------->
+
+<div class="row md-5">
+    <div class="col-md-4">
+        <div class="uk">
+            <div class="card border border-danger">
+                <img class="img-fluid" src="image/uk.jpg" alt="gallery" id="galleryimg">
+                <h6 class="galleryname">United Kingdom</h6>
+                <p id="para">The United Kingdom, made up of England, Scotland, Wales and Northern Ireland, is an island nation in northwestern Europe. England – birthplace of Shakespeare and The Beatles – is home to the capital, London, a globally influential centre of finance and culture.</p>
+            <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+            </div>
+            <p id="price"> Price: $900</p>
+            <button id="gallerybtn">Book Now</button>
+            </div>
+        </div>
+        </div>
+    
+    <div class="col-md-4">
+        <div class="france">
+        <div class="card border border-danger">
+            
+            <img class="img-fluid" src="image/france.jpg" alt="gallery" id="galleryimg">
+            <h6 class="galleryname">France</h6>
+            <p id="para">France, in Western Europe, encompasses medieval cities, alpine villages and Mediterranean beaches. Paris, its capital, is famed for its fashion houses, classical art museums including the Louvre and monuments like the Eiffel Tower.</p>
+        <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+        </div>
+        <p id="price"> Price: $1000</p>
+        <button id="gallerybtn">Book Now</button>
+        </div>
+    </div>
+    </div>
+    
+    
+    <div class="col-md-4">
+        <div class="italy">
+        <div class="card border border-danger">
+            <img class="img-fluid" src="image/maldives.jpg" alt="gallery" id="galleryimg">
+            <h6 class="galleryname">Maldives</h6>
+            <p id="para">The Maldives, officially the Republic of Maldives, is a country and archipelagic state in South Asia in the Indian Ocean. The Maldives is named after the main island and capital of Male. The word "Maldives" means "the islands of Male".
+            </p>
+        <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+        </div>
+        <p id="price"> Price: $500</p>
+        <button id="gallerybtn">Book Now</button>
+        </div>
+    </div>
+    </div>
+</div>  <!------------second row--------------------->
+    
+<div class="row md-5">
+
+        <div class="col-md-4">
+            <div class="autralia">
+                <div class="card border border-danger">
+                    <img class="img-fluid" src="image/australia.jpg" alt="gallery" id="galleryimg">
+                    <h6 class="galleryname">Australia</h6>
+                    <p id="para">Australia, officially the Commonwealth of Australia, is a sovereign country comprising the mainland of the Australian continent, the island of Tasmania, and numerous smaller islands. Australia is the largest country by area in Oceania and the world's sixth-largest country.</p>
+                <div id="star">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                </div>
+                <p id="price"> Price: $1000</p>
+                <button id="gallerybtn">Book Now</button>
+                </div>
+            </div>
+            </div>
+        
+        <div class="col-md-4">
+            <div class="russia">
+            <div class="card border border-danger">
+                
+                <img class="img-fluid" src="image/russia.jpg" alt="gallery" id="galleryimg">
+                <h6 class="galleryname">Russia</h6>
+                <p id="para">Russia contains Europe's longest river, the Volga, and its largest lake, Ladoga. Russia also is home to the world's deepest lake, Baikal, and the country recorded the world's lowest temperature outside the North and South poles.</p>
+                <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+            </div>
+            <p id="price"> Price: $400</p>
+            <button id="gallerybtn">Book Now</button>
+            </div>
+        </div>
+        </div>
+        
+        
+        <div class="col-md-4">
+            <div class="indo">
+            <div class="card border border-danger">
+                <img class="img-fluid" src="image/indoesia.jpg" alt="gallery" id="galleryimg">
+                <h6 class="galleryname">Indoesia</h6>
+                <p id="para">Indonesia, officially the Republic of Indonesia, is a country in Southeast Asia and Oceania between the Indian and Pacific oceans. It consists of over 17,000 islands, including Sumatra, Java, Sulawesi, and parts of Borneo and New Guinea.</p>
+            <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+            </div>
+            <p id="price"> Price: $450</p>
+            <button id="gallerybtn">Book Now</button>
+            </div>
+        </div>
+        </div>  <!------------last row--------------------->
+        
+</div>
+</div>
+
+
+<!-------------------end of package-------------------------------------->
+
+
+
+<!------------------packages----------------------->
+<form>
+    <div id="card">
+        <h1 id="booking" >Book Your Trip</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-fluid" src="image/imageback.jpg" alt="bookingimg" id="bookimg">
+        </div>
+
+    <div class="col-md-8">
+        <form action="form">
+            <div class="form-group">
+        
+        <select class="form-control" name="select" id="select" required>
+            <option>Select</option>
+            <option>India</option>
+            <option>Germany</option>
+            <option>USA</option>
+            <option>Italy</option>
+            <option>France</option>
+        </select><br>
+
+        
+        <input type="number" class="form-control" id="person" placeholder="How Many Persons" name="person" required><br>
+        
+        
+        <input type="date" class="form-control" id="checkin" required><br>
+
+        
+        <input type="date" class="form-control" id="checkout" required><br>
+
+        
+        <input type="text" id="req" maxlength="50" minlength="500"class="form-control" placeholder="Requirements"><br><br>
+
+        <button type="button"  onclick="popUp()"  id="formbook"><a href="#">Book</a></button>
+
+    </div>
+</div>
+</div>
+</div>
+</form>
+
+
+
+<script type="text/javascript">
+
+    var Today = new Date();
+
+    var month = Today.getMonth() + 1;
+    var day = Today.getDate() + 1;
+    var year = Today.getFullYear();
+
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+
+    var Date = year + '-' + month + '-' + day;
+
+    document.getElementById('checkin').setAttribute('min', Date);
+
+
+    function popUp() {
+            alert("Your Booking Successfull!");
+    }
+</script>
+
+
+
+
+<!----------------------end of packages---------------------------->
+
+<h2 id="service"> Services</h2>
+<div class="row">
+    <div class="col-sm-2">
+    <div class="card">
+        <div class="card-body">
+            <img class="img-fluid" src="icons/icons8-building-location-53.png" alt="hotel">
+        <h5 class="card-title">Affordable Hotels</h5>
+    <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="col-sm-2">
+    <div class="card">
+        <div class="card-body">
+            <img class="img-fluid" src="icons/icons8-restaurant-64.png" alt="food">
+        <h5 class="card-title">Food & Drinks</h5>
+    <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+    </div>
+    </div>
+    </div>
+    </div>
+
+<div class="col-sm-2">
+    <div class="card">
+        <div class="card-body">
+            <img class="img-fluid" src="icons/icons8-wi-fi-48.png" alt="wifi">
+        <h5 class="card-title">WIFI</h5>
+    <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+    </div>
+    </div>
+    </div>
+    </div>
+
+<div class="col-sm-2">
+    <div class="card">
+        <div class="card-body">
+            <img class="img-fluid" src="icons/icons8-food-service-50.png" alt="service">
+        <h5 class="card-title">Service</h5>
+        <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+    </div>
+    </div>
+    </div>
+    </div>
+
+<div class="col-sm-2">
+    <div class="card">
+        <div class="card-body">
+            <img class="img-fluid" src="icons/icons8-protect-64.png" alt="safety">
+        <h5 class="card-title">Safety</h5>
+        <div id="star">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star"></i>
+    </div>
+    </div>
+    </div>
+    </div>
+
+<div class="col-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <img class="img-fluid" src="icons/icons8-car-30.png" alt="transport">
+            <h5 class="card-title">Transporation</h5>
+            <div id="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+        </div>
+        </div>
+        </div>
+</div>
+</div>
+
+<!--------------start of carousel------------------->
+<div class="scrollgallery">
+<h2 id="gallery">Gallery</h2>
+<div class="scroll-container">
+    <img src="image/image1.jpg" alt="img1">
+    <img src="image/image2.jpg" alt="img2">
+    <img src="image/image3.jpg" alt="img3">
+    <img src="image/image4.jpg" alt="img4">
+    <img src="image/image5.jpg" alt="img5">
+    <img src="image/image6.jpg" alt="img6">
+    <img src="image/image7.jpg" alt="img7">
+    <img src="image/image8.jpg" alt="img8">
+    <img src="image/image9.jpg" alt="img9">
+    <img src="image/image10.jpg" alt="img10">
+</div>
+</div>
+<!--------------end of carousel------------------->
+
+<!--------------start of about------------------->
+<h2 id="about">About Us</h2>
+<div class="container">
+    <div class="row">
+    <div class="col">
+        <img id="aboutimg" src="image/trip.com" alt="aboutimg">
+    </div>
+    <div class="col">
+        <h5>Why <span id="aboutname">trip.com</span>?</h5>
+        <p>Established in 2022, trip.com has since positioned itself as one of the leading companies, providing great offers, competitive airfares, exclusive discounts, and a seamless online booking experience to many of its customers. The experience of booking your flight tickets, hotel stay, and holiday package through our desktop site or mobile app can be done with complete ease and no hassles at all. We also deliver amazing offers, such as Instant Discounts, Fare Calendar, MyRewardsProgram, MyWallet, and many more while updating them from time to time to better suit our customers’ evolving needs and demands.</p>
+    </div>
+</div>
+</div>
+<!--------------end of about------------------->
+
+
+<!--------------start of footer------------------>
+<footer class="footer">
+    <div class="container text-center">
+    <img src="tripcom-logos_white.png" id="footer-logo" alt="Trip Logo">
+    <span class="footer-brand">trip.com</span>
+    <p id="footerp">Escape. <span id="explore">Explore</span>. Experience</p>
+    <div class="social-icons">
+        <a href="#"><i class="bi bi-instagram"></i></a> <!-- Instagram icon -->
+        <a href="#"><i class="bi bi-facebook"></i></a> <!-- Facebook icon -->
+        <a href="#"><i class="bi bi-google"></i></a> <!-- Google icon -->
+    </div>
+    <div>
+        <p>&copy; 2024 Trip Website. All rights reserved.</p>
+    </div>
+    </div>
+</footer>
+<!--------------end of footer------------------>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
