@@ -46,30 +46,7 @@
     </div>
 </div>
 
-
-
-<script>
-    function validateForm() {
-        var fullname = document.getElementById("fullname").value;
-        var contact = document.getElementById("contact").value;
-        var dob = document.getElementById("dob").value;
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
-        var confirmpassword= document.getElementById("confirmpassword").value;
-        var gender = document.getElementById("gender").value;
-
-        // Simple validation
-        if (fullname.trim() === "" || contact.trim() === "" || dob.trim() === "" || email.trim() === "" || password.trim() === "" || confirmpassword.trim() === "" || gender === "") {
-            alert("All fields are required");
-            return false;
-        }
-        return true;
-
-        if (password !== confirmPassword) {
-        return prompt("Password do not match, try again!")
-        }
-    }
-</script>
+<script src="index.js"></script>    
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
