@@ -345,33 +345,6 @@
 </form>
 
 
-
-<script type="text/javascript">
-
-    var Today = new Date();
-
-    var month = Today.getMonth() + 1;
-    var day = Today.getDate() + 1;
-    var year = Today.getFullYear();
-
-    if(month < 10)
-        month = '0' + month.toString();
-    if(day < 10)
-        day = '0' + day.toString();
-
-    var Date = year + '-' + month + '-' + day;
-
-    document.getElementById('checkin').setAttribute('min', Date);
-
-
-    function popUp() {
-            alert("Your Booking Successfull!");
-    }
-</script>
-
-
-
-
 <!----------------------end of packages---------------------------->
 
 <h2 id="service"> Services</h2>
@@ -529,6 +502,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+<script src="index.js"></script> 
 </body>
 </html>
